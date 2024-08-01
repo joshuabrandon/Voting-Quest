@@ -10,9 +10,9 @@ public class AnswerDisplay : MonoBehaviour
     [SerializeField] private GameObject answerCardPrefab;
 
     //private List<InterviewAnswer> interviewAnswers;
-    private GameObject answerCard;
-    private TextMeshProUGUI answerText;
-
+    //private GameObject answerCard;
+    //private TextMeshProUGUI answerText;
+    //
     //private void Start()
     //{
     //    InterviewAnswers();

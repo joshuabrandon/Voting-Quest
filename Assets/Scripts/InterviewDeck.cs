@@ -21,14 +21,19 @@ public class InterviewDeck : MonoBehaviour
 
     [SerializeField] private ScriptableJob _activeJob;
     [SerializeField] private List<ScriptableInterviewQuestion> _interviewQuestions;
-    [SerializeField] private InterviewCard _cardPrefab;
+    [SerializeField] private InterviewCard _questionCardPrefab;
+    [SerializeField] private GameObject _questionCardArea;
 
-    [SerializeField] private GameObject _cardArea;
+    private ScriptableInterviewQuestion currentInterviewQuestion;
+
+    public List<ScriptableAnswerCard> _answerCards;
 
     private void Start()
     {
         BuildInterviewDeck();
+        ChooseInterviewQuestion();
         InstantiateInterviewQuestion();
+        PopulateInterviewAnswers();
     }
 
     private void BuildInterviewDeck()
@@ -36,9 +41,19 @@ public class InterviewDeck : MonoBehaviour
         _interviewQuestions = _activeJob.InterviewQuestions;
     }
 
+    private void ChooseInterviewQuestion()
+    {
+        currentInterviewQuestion = _interviewQuestions[0];
+    }
+
     private void InstantiateInterviewQuestion()
     {
-        InterviewCard card = Instantiate(_cardPrefab, _cardArea.transform);
-        card.SetUp(_interviewQuestions[0]);
+        InterviewCard card = Instantiate(_questionCardPrefab, _questionCardArea.transform);
+        card.SetUp(currentInterviewQuestion);
+    }
+    
+    private void PopulateInterviewAnswers()
+    {
+        _answerCards = currentInterviewQuestion.InterviewAnswers;
     }
 }

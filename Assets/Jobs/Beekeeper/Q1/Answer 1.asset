@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895f4a579c3ba494db98878384120f78, type: 3}
   m_Name: Answer 1
   m_EditorClassIdentifier: 
-  <AnswerText>k__BackingField: Tehy make honey.
+  <AnswerText>k__BackingField: They make honey.
   <CompetencyScore>k__BackingField: 0
   <PersonalityScore>k__BackingField: 0
   <CompetencyEmblem>k__BackingField: {fileID: 0}
