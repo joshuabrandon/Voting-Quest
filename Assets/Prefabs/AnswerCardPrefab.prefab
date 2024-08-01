@@ -163,10 +163,11 @@ GameObject:
   - component: {fileID: 5832803147375208134}
   - component: {fileID: 2176229100493307723}
   - component: {fileID: 7355907450276366541}
+  - component: {fileID: 4549529846955932323}
   - component: {fileID: -4420539661281578749}
   m_Layer: 5
   m_Name: AnswerCardPrefab
-  m_TagString: Untagged
+  m_TagString: AnswerCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,6 +264,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CardData>k__BackingField: {fileID: 0}
+--- !u!114 &4549529846955932323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950330657689815062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b376eba3e05b42f46819dd2fcd1c7949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _competencyScore: 0
+  _personalityScore: 0
 --- !u!114 &-4420539661281578749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +321,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5832803147375208134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4549529846955932323}
+        m_TargetAssemblyTypeName: AnswerCardEffect, Assembly-CSharp
+        m_MethodName: ApplyCardScores
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4549529846955932323}
+        m_TargetAssemblyTypeName: AnswerCardEffect, Assembly-CSharp
+        m_MethodName: GoToNextQuestion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1182953794901211604
 GameObject:
   m_ObjectHideFlags: 0

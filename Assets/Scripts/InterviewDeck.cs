@@ -7,9 +7,9 @@ public class InterviewDeck : MonoBehaviour
     private void Awake()
     {
         // typical singleton declaration
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
         else
         {
@@ -17,16 +17,20 @@ public class InterviewDeck : MonoBehaviour
         }
     }
 
-    public static InterviewDeck Instance { get; private set; }
+    public static InterviewDeck instance { get; private set; }
 
     [SerializeField] private ScriptableJob _activeJob;
+    [SerializeField] private AnswerDeck _answerDeck;
     [SerializeField] private List<ScriptableInterviewQuestion> _interviewQuestions;
     [SerializeField] private InterviewCard _questionCardPrefab;
     [SerializeField] private GameObject _questionCardArea;
 
     private ScriptableInterviewQuestion currentInterviewQuestion;
+    public int interviewQuestionIndex = 0;
 
     public List<ScriptableAnswerCard> _answerCards;
+
+    public Sprite _interviewerProfilePicture;
 
     private void Start()
     {
@@ -34,6 +38,7 @@ public class InterviewDeck : MonoBehaviour
         ChooseInterviewQuestion();
         InstantiateInterviewQuestion();
         PopulateInterviewAnswers();
+        GetInterviewerProfilePicture();
     }
 
     private void BuildInterviewDeck()
@@ -43,7 +48,7 @@ public class InterviewDeck : MonoBehaviour
 
     private void ChooseInterviewQuestion()
     {
-        currentInterviewQuestion = _interviewQuestions[0];
+        currentInterviewQuestion = _interviewQuestions[interviewQuestionIndex];
     }
 
     private void InstantiateInterviewQuestion()
@@ -55,5 +60,35 @@ public class InterviewDeck : MonoBehaviour
     private void PopulateInterviewAnswers()
     {
         _answerCards = currentInterviewQuestion.InterviewAnswers;
+    }
+
+    private void GetInterviewerProfilePicture()
+    {
+        _interviewerProfilePicture = _activeJob.InterviewerSprite;
+    }
+
+    public void SetupNextQuestion()
+    {
+        if (interviewQuestionIndex >= _interviewQuestions.Count)
+        {
+            // End run
+            Debug.Log("Out of questions.");
+            StartCoroutine (GameManager.instance.EndRun()); // read about StartCoroutine
+        }
+        else
+        {
+            // Delete existing question object
+            Destroy(GameObject.FindGameObjectWithTag("QuestionText"));
+            // Instantiate new question object
+            ChooseInterviewQuestion();
+            InstantiateInterviewQuestion();
+            // Update existing interview answers list
+            PopulateInterviewAnswers();
+            // Delete existing interview answer cards
+            GameObject[] _answers = GameObject.FindGameObjectsWithTag("AnswerCard");
+            foreach(GameObject _answer in _answers) GameObject.Destroy(_answer);
+            // Instantiate new interview answer cards
+            _answerDeck.PopulateAnswerGrid();
+        }
     }
 }

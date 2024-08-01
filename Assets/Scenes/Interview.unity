@@ -785,7 +785,6 @@ GameObject:
   - component: {fileID: 943939695}
   - component: {fileID: 943939697}
   - component: {fileID: 943939696}
-  - component: {fileID: 943939698}
   m_Layer: 5
   m_Name: Value
   m_TagString: Untagged
@@ -909,18 +908,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943939694}
   m_CullTransparentMesh: 1
---- !u!114 &943939698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943939694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 694870aedcb386c43bdd6d145985e06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &947139235
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +919,7 @@ GameObject:
   - component: {fileID: 947139238}
   - component: {fileID: 947139237}
   - component: {fileID: 947139236}
+  - component: {fileID: 947139239}
   m_Layer: 5
   m_Name: Interviewer Image
   m_TagString: Untagged
@@ -996,6 +984,20 @@ RectTransform:
   m_AnchoredPosition: {x: 725, y: 319}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &947139239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947139235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0be4403f0c881458fed30096a92d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interviewDeck: {fileID: 1475367880}
+  interviewerSprite: {fileID: 0}
 --- !u!1 &1471109884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,10 +1102,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activeJob: {fileID: 11400000, guid: 958fbd5099312054e90617727a7214e1, type: 2}
+  _answerDeck: {fileID: 1475367881}
   _interviewQuestions: []
   _questionCardPrefab: {fileID: 3662290858717771127, guid: c4d98683d8467e3409c038c2adc44157, type: 3}
   _questionCardArea: {fileID: 1692089736}
+  interviewQuestionIndex: 0
   _answerCards: []
+  _interviewerProfilePicture: {fileID: 0}
 --- !u!114 &1475367881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,8 +1247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayCompetencyScore: {fileID: 943939696}
   displayPersonalityScore: {fileID: 1800004446}
-  sprite: {fileID: 0}
-  interviewerImage: {fileID: 947139235}
 --- !u!114 &1539885727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,7 +1516,6 @@ GameObject:
   - component: {fileID: 1800004445}
   - component: {fileID: 1800004447}
   - component: {fileID: 1800004446}
-  - component: {fileID: 1800004448}
   m_Layer: 5
   m_Name: Value
   m_TagString: Untagged
@@ -1637,18 +1639,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800004444}
   m_CullTransparentMesh: 1
---- !u!114 &1800004448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800004444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786427825cc1e8a43bcaf0e3bfad2950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2108966815
 GameObject:
   m_ObjectHideFlags: 0

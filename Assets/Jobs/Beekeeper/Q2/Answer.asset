@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Answer
   m_EditorClassIdentifier: 
   <AnswerText>k__BackingField: Nothing, it is their right.
-  <CompetencyScore>k__BackingField: 0
-  <PersonalityScore>k__BackingField: 0
+  <CompetencyScore>k__BackingField: 20
+  <PersonalityScore>k__BackingField: 20
   <CompetencyEmblem>k__BackingField: {fileID: 0}
   <CompetencyIndicator>k__BackingField: {fileID: 0}
   <PersonalityEmblem>k__BackingField: {fileID: 0}

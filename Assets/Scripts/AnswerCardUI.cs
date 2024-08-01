@@ -12,7 +12,6 @@ public class AnswerCardUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _answerText;
     [SerializeField] private Image _competencyEmblem;
     [SerializeField] private Image _competencyIndicator;
-
     [SerializeField] private Image _personalityEmblem;
     [SerializeField] private Image _personalityIndicator;
 

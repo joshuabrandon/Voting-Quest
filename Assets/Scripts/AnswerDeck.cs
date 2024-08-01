@@ -16,7 +16,7 @@ public class AnswerDeck : MonoBehaviour
         PopulateAnswerGrid();
     }
 
-    private void PopulateAnswerGrid()
+    public void PopulateAnswerGrid()
     {
         _answerCards = _interviewDeck._answerCards;
         foreach (var answer in _answerCards)

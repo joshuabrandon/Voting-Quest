@@ -61,6 +61,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public IEnumerator EndRun() // read about IEnumerator
+    {
+        yield return new WaitForSeconds(2);
+        if (competencyScore + personalityScore >= combinedWinThreshold)
+        {
+            GameWon();
+        }
+        else
+        {
+            GameOver();
+        }
+    }
+
     private void GameOver()
     {
         SceneManager.LoadScene("LossScene");

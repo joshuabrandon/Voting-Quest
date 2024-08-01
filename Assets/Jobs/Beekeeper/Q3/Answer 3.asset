@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <AnswerText>k__BackingField: All of them.
   <CompetencyScore>k__BackingField: 0
-  <PersonalityScore>k__BackingField: 0
+  <PersonalityScore>k__BackingField: 10
   <CompetencyEmblem>k__BackingField: {fileID: 0}
   <CompetencyIndicator>k__BackingField: {fileID: 0}
   <PersonalityEmblem>k__BackingField: {fileID: 0}
