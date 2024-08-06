@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenuController : MonoBehaviour
     public void Update()
     {
         ToggleSettingsMenu();
+        DeselectButton();
     }
 
     public void PlayGame()
@@ -62,5 +64,10 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Interview");
+    }
+
+    public void DeselectButton()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }
