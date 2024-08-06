@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LossScene.unity
     guid: f9b590748803fb148932e8c94a73ebf0
+  - enabled: 1
+    path: Assets/Scenes/ApplicantSelection.unity
+    guid: 78baff4e5af55b943af40fb81dfc036a
+  - enabled: 1
+    path: Assets/Scenes/JobSelection.unity
+    guid: 8d01069c8aa62164e947e39cb2c81269
   m_configObjects: {}

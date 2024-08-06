@@ -24,7 +24,6 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    // Press Escape to bring up Settings
     public void ToggleSettingsMenu()
     {
         if (mainUI.activeSelf == true)
@@ -48,5 +47,20 @@ public class MenuController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void GoToJobSelection()
+    {
+        SceneManager.LoadScene("JobSelection");
+    }
+
+    public void GoToApplicantSelection()
+    {
+        SceneManager.LoadScene("ApplicantSelection");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Interview");
     }
 }
