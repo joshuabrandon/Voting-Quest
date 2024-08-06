@@ -25,4 +25,10 @@ public class AnswerDeck : MonoBehaviour
             card.SetUp(answer);
         }
     }
+
+    public void ClearAnswerGrid()
+    {
+        GameObject[] _answers = GameObject.FindGameObjectsWithTag("AnswerCard");
+        foreach (GameObject _answer in _answers) GameObject.Destroy(_answer);
+    }
 }

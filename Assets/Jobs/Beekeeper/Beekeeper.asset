@@ -18,4 +18,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d72d64c85622f74dbadd94379ad8b27, type: 2}
   - {fileID: 11400000, guid: f9601ccc3c87bf44792201ea8d50eef3, type: 2}
   - {fileID: 11400000, guid: 888835a0f8b01484dbe5c35bc711c5bb, type: 2}
+  - {fileID: 11400000, guid: 0a7dd7d0128e77a4e92c329ce829877c, type: 2}
   <InterviewerSprite>k__BackingField: {fileID: 21300000, guid: 00817c8763a019a4dacca1546942528d, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.Linq;
 
 public class SettingsMenu : MonoBehaviour
 {

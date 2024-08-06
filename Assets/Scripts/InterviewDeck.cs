@@ -72,6 +72,7 @@ public class InterviewDeck : MonoBehaviour
         if (interviewQuestionIndex >= _interviewQuestions.Count)
         {
             // End run
+            _answerDeck.ClearAnswerGrid();
             Debug.Log("Out of questions.");
             StartCoroutine (GameManager.instance.EndRun()); // read about StartCoroutine
         }
@@ -85,10 +86,11 @@ public class InterviewDeck : MonoBehaviour
             // Update existing interview answers list
             PopulateInterviewAnswers();
             // Delete existing interview answer cards
-            GameObject[] _answers = GameObject.FindGameObjectsWithTag("AnswerCard");
-            foreach(GameObject _answer in _answers) GameObject.Destroy(_answer);
+            _answerDeck.ClearAnswerGrid();
             // Instantiate new interview answer cards
             _answerDeck.PopulateAnswerGrid();
         }
     }
+
+
 }
