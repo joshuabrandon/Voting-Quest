@@ -5,9 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(InterviewCardUI))]
 public class InterviewCard : MonoBehaviour
 {
-    [field: SerializeField] public ScriptableInterviewQuestion CardData { get; private set; }
+    [field: SerializeField] public Question CardData { get; private set; }
 
-    public void SetUp(ScriptableInterviewQuestion data)
+    public void SetUp(Question data)
     {
         CardData = data;
         GetComponent<InterviewCardUI>().SetCardUI();

@@ -19,17 +19,18 @@ public class InterviewDeck : MonoBehaviour
 
     public static InterviewDeck instance { get; private set; }
 
-    [SerializeField] private ScriptableJob _activeJob;
+    [SerializeField] private Job _activeJob;
+    [SerializeField] private List<Question> _questions;
     [SerializeField] private AnswerDeck _answerDeck;
-    [SerializeField] private List<ScriptableInterviewQuestion> _interviewQuestions;
     [SerializeField] private InterviewCard _questionCardPrefab;
     [SerializeField] private GameObject _questionCardArea;
 
-    private ScriptableInterviewQuestion currentInterviewQuestion;
-    public int interviewQuestionIndex = 0;
+    private Question currentInterviewQuestion;
+    public int interviewQuestionIndex = 0; // modify this to start on different questions, or have list be randomized
 
-    public List<ScriptableAnswerCard> _answerCards;
+    //public List<ScriptableAnswerCard> _answerCards;
 
+    public List<Answer> _answers;
     public Sprite _interviewerProfilePicture;
 
     private void Start()
@@ -43,12 +44,12 @@ public class InterviewDeck : MonoBehaviour
 
     private void BuildInterviewDeck()
     {
-        _interviewQuestions = _activeJob.InterviewQuestions;
+        _questions = _activeJob.questionList;
     }
 
     private void ChooseInterviewQuestion()
     {
-        currentInterviewQuestion = _interviewQuestions[interviewQuestionIndex];
+        currentInterviewQuestion = _questions[interviewQuestionIndex];
     }
 
     private void InstantiateInterviewQuestion()
@@ -59,17 +60,17 @@ public class InterviewDeck : MonoBehaviour
     
     private void PopulateInterviewAnswers()
     {
-        _answerCards = currentInterviewQuestion.InterviewAnswers;
+        _answers = currentInterviewQuestion.answerList;
     }
 
     private void GetInterviewerProfilePicture()
     {
-        _interviewerProfilePicture = _activeJob.InterviewerSprite;
+        _interviewerProfilePicture = _activeJob.interviewerSprite;
     }
 
     public void SetupNextQuestion()
     {
-        if (interviewQuestionIndex >= _interviewQuestions.Count)
+        if (interviewQuestionIndex >= _questions.Count)
         {
             // End run
             _answerDeck.ClearAnswerGrid();

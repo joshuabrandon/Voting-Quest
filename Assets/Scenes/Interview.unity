@@ -1633,13 +1633,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cf995bf8308e84aafce0fb3446c189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activeJob: {fileID: 11400000, guid: 958fbd5099312054e90617727a7214e1, type: 2}
+  _activeJob: {fileID: 11400000, guid: e0dd3b68233b2774ca1ad30cbeb57ab3, type: 2}
+  _questions: []
   _answerDeck: {fileID: 2962691116201197170}
-  _interviewQuestions: []
   _questionCardPrefab: {fileID: 3662290858717771127, guid: c4d98683d8467e3409c038c2adc44157, type: 3}
   _questionCardArea: {fileID: 1692089736}
   interviewQuestionIndex: 0
-  _answerCards: []
+  _answers: []
   _interviewerProfilePicture: {fileID: 0}
 --- !u!224 &1723763034138526525
 RectTransform:

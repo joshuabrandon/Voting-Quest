@@ -33,6 +33,6 @@ public class InterviewCardUI : MonoBehaviour
 
     private void SetCardTexts()
     {
-        _questionText.text = _card.CardData.QuestionText;
+        _questionText.text = _card.CardData.questionText;
     }
 }

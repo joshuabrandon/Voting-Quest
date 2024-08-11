@@ -6,9 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(AnswerCardEffect))]
 public class AnswerCard : MonoBehaviour
 {
-    [field: SerializeField] public ScriptableAnswerCard CardData { get; private set; }
+    [field: SerializeField] public Answer CardData { get; private set; }
 
-    public void SetUp(ScriptableAnswerCard data)
+    public void SetUp(Answer data)
     {
         CardData = data;
         GetComponent<AnswerCardUI>().SetCardUI();

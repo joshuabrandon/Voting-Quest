@@ -9,7 +9,7 @@ public class AnswerDeck : MonoBehaviour
     [SerializeField] private AnswerCard _answerCardPrefab;
     [SerializeField] private GameObject _answerCardArea;
 
-    private List<ScriptableAnswerCard> _answerCards;
+    private List<Answer> _answerCards;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class AnswerDeck : MonoBehaviour
 
     public void PopulateAnswerGrid()
     {
-        _answerCards = _interviewDeck._answerCards;
+        _answerCards = _interviewDeck._answers;
         foreach (var answer in _answerCards)
         {
             AnswerCard card = Instantiate(_answerCardPrefab, _answerCardArea.transform);

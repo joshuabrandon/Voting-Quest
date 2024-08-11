@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06255582122a80b4d89b034c6cd6dee4, type: 3}
   m_Name: JobEditorWindowData
   m_EditorClassIdentifier: 
-  jobId: 4
+  jobId: 2
   questionId: 4
-  answerId: 3
+  answerId: 13

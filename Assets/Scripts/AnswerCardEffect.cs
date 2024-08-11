@@ -31,8 +31,8 @@ public class AnswerCardEffect : MonoBehaviour
 
     private void SetCardScores()
     {
-        _competencyScore = (int)_card.CardData.CompetencyScore;
-        _personalityScore = (int)_card.CardData.PersonalityScore;
+        _competencyScore = (int)_card.CardData.competencyScore;
+        _personalityScore = (int)_card.CardData.personalityScore;
     }
 
     public void ApplyCardScores()
