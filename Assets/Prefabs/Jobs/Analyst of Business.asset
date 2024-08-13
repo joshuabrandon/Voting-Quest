@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631deeb223ece594a95c7b6ec0ac24e7, type: 3}
+  m_Name: Analyst of Business
+  m_EditorClassIdentifier: 
+  jobId: 4
+  jobName: Analyst of Business
+  jobDescription: You know that this is.
+  jobLevel: 1
+  interviewerSprite: {fileID: 0}
+  questionList:
+  - questionId: 1
+    questionText: This is the first test question.
+    answerList:
+    - answerId: 1
+      answerText: This is a test answer. A good one!
+      competencyScore: 5
+      personalityScore: 5
+    - answerId: 2
+      answerText: This is a test answer. A bad one.
+      competencyScore: -5
+      personalityScore: -5
+    - answerId: 3
+      answerText: This is a neutral test answer.
+      competencyScore: 0
+      personalityScore: 0
+    - answerId: 4
+      answerText: This is another neutral test answer.
+      competencyScore: 0
+      personalityScore: 0
+  - questionId: 2
+    questionText: This is the second test question
+    answerList:
+    - answerId: 5
+      answerText: This is the good answer.
+      competencyScore: 5
+      personalityScore: 5
+    - answerId: 6
+      answerText: This is a bad answer.
+      competencyScore: -5
+      personalityScore: -5
+    - answerId: 7
+      answerText: This is the best answer.
+      competencyScore: 10
+      personalityScore: 10
+    - answerId: 8
+      answerText: This is the worst answer.
+      competencyScore: -10
+      personalityScore: -10
+  - questionId: 3
+    questionText: This question has mixed response.
+    answerList:
+    - answerId: 9
+      answerText: This answer is good and bad.
+      competencyScore: 5
+      personalityScore: -5
+    - answerId: 10
+      answerText: This answer is bad and good.
+      competencyScore: -5
+      personalityScore: 5
+    - answerId: 11
+      answerText: This answer is weird.
+      competencyScore: -3
+      personalityScore: -7
+    - answerId: 12
+      answerText: This one is good weird.
+      competencyScore: 5
+      personalityScore: 7

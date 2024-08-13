@@ -51,7 +51,7 @@ public class JobEditorWindow : EditorWindow
         if (GUILayout.Button("Add Job"))
         {
             Job newJob = ScriptableObject.CreateInstance<Job>();
-            newJob.Initialize(jobId.intValue, "New Job", "", null, new List<Question>());
+            newJob.Initialize(jobId.intValue, "New Job", "", JobLevel.Entry, null, new List<Question>());
             jobs.Add(newJob);
             jobId.intValue += 1;
         }
@@ -165,7 +165,7 @@ public class JobEditorWindow : EditorWindow
         string path = $"Assets/Prefabs/Jobs/{job.jobName}.asset";
 
         Job newJob = ScriptableObject.CreateInstance<Job>();
-        newJob.Initialize(job.jobId, job.jobName, job.jobDescription, job.interviewerSprite, new List<Question>(job.questionList));
+        newJob.Initialize(job.jobId, job.jobName, job.jobDescription, job.jobLevel, job.interviewerSprite, new List<Question>(job.questionList));
 
         AssetDatabase.CreateAsset(newJob, path);
         AssetDatabase.SaveAssets();

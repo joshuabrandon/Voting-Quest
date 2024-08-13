@@ -13,7 +13,7 @@ public class AnswerDeck : MonoBehaviour
 
     private void Start()
     {
-        PopulateAnswerGrid();
+        PopulateAnswerGrid(); // remove at some point, make based on an event
     }
 
     public void PopulateAnswerGrid()

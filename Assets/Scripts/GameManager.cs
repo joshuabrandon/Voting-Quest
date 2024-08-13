@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public bool isLost = false;
     public bool isWon = false;
+
+    public List<Job> allJobs;
     
     public int competencyScore = 0;
     public int personalityScore = 0;

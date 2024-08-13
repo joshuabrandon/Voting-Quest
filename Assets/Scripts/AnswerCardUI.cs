@@ -31,7 +31,7 @@ public class AnswerCardUI : MonoBehaviour
         if (_card != null && _card.CardData != null)
         {
             SetCardTexts();
-            SetCardImage();
+            SetCardImages();
         }
     }
 
@@ -40,7 +40,7 @@ public class AnswerCardUI : MonoBehaviour
         _answerText.text = _card.CardData.answerText;
     }
 
-    private void SetCardImage()
+    private void SetCardImages()
     {
         //_competencyEmblem.sprite = _card.CardData.CompetencyEmblem;
         //_competencyIndicator.sprite = _card.CardData.CompetencyIndicator;

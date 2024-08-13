@@ -46,6 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLost: 0
   isWon: 0
+  allJobs:
+  - {fileID: 11400000, guid: 1667a6bb8c67f8f4daf64e28f1c5a980, type: 2}
+  - {fileID: 11400000, guid: 94de0e9393e26e6419b221bc1b196064, type: 2}
+  - {fileID: 11400000, guid: 413df0ee4bb01c5468c9df0f0a9dc4fb, type: 2}
+  - {fileID: 11400000, guid: 78294da04b3345b4091c6a48517d9965, type: 2}
+  - {fileID: 11400000, guid: 5952e2fb407a55044ad02b9df1481cb4, type: 2}
+  - {fileID: 11400000, guid: e0dd3b68233b2774ca1ad30cbeb57ab3, type: 2}
   competencyScore: 0
   personalityScore: 0
   competencyLoseThreshold: -100
