@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class JobSelectionBlockUI : MonoBehaviour
+public class JobSelectionBlock : MonoBehaviour
 {
     [Header("Prefab Elements")]
     [SerializeField] private Image jobImage;
@@ -13,10 +13,13 @@ public class JobSelectionBlockUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI earnings;
     [SerializeField] private TextMeshProUGUI applicantStatus;
 
+    [SerializeField] private Job activeJob;
+
     public void InstantiateJobSelectionBlock(Job job, GameObject parentArea)
     {
         SetCardTexts(job);
         SetCardImages(job);
+        SetCardData(job);
         Instantiate(this, parentArea.transform);
     }
 
@@ -32,5 +35,15 @@ public class JobSelectionBlockUI : MonoBehaviour
     private void SetCardImages(Job job)
     {
         //jobImage.sprite = job.jobImage; // need to implement this in Job class
+    }
+
+    private void SetCardData(Job job)
+    {
+        activeJob = job;
+    }
+
+    public void SetActiveJob()
+    {
+        GameManager.instance.activeJob = activeJob;
     }
 }

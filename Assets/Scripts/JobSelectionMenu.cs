@@ -36,7 +36,7 @@ public class JobSelectionMenu : MonoBehaviour
     {
         for (int i = 0; i < jobs.Count; i++)
         {
-            jobSelectionBlock.GetComponent<JobSelectionBlockUI>().InstantiateJobSelectionBlock(jobs[i], parentArea);
+            jobSelectionBlock.GetComponent<JobSelectionBlock>().InstantiateJobSelectionBlock(jobs[i], parentArea);
         }
     }
 
@@ -63,4 +63,7 @@ public class JobSelectionMenu : MonoBehaviour
         ClearDisplay();
         InstantiateJobSelectionBlocks(seniorJobs, jobSelectionArea);
     }
+
+    // add button to the JobSelectionBlock prefab
+    // add public methods to this class to set selected Job ID for the run
 }

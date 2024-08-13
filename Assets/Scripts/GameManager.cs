@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public int personalityWinThreshold = 100;
     public int combinedWinThreshold = 100;
 
+    public Job activeJob = null;
+
     private void Update()
     {
         if (isLost)

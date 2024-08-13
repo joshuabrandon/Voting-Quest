@@ -19,7 +19,7 @@ MonoBehaviour:
   interviewerSprite: {fileID: 0}
   questionList:
   - questionId: 1
-    questionText: This is the first test question.
+    questionText: Wow this is tough.
     answerList:
     - answerId: 1
       answerText: This is a test answer. A good one!
@@ -38,7 +38,7 @@ MonoBehaviour:
       competencyScore: 0
       personalityScore: 0
   - questionId: 2
-    questionText: This is the second test question
+    questionText: You are a genius.
     answerList:
     - answerId: 5
       answerText: This is the good answer.
@@ -57,7 +57,7 @@ MonoBehaviour:
       competencyScore: -10
       personalityScore: -10
   - questionId: 3
-    questionText: This question has mixed response.
+    questionText: I love you.
     answerList:
     - answerId: 9
       answerText: This answer is good and bad.

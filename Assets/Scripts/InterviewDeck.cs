@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InterviewDeck : MonoBehaviour
 {
-    private void Awake()
+    private void Awake() // chance that this should not end up as a singleton
     {
         // typical singleton declaration
         if (instance == null)
@@ -33,8 +33,10 @@ public class InterviewDeck : MonoBehaviour
     public List<Answer> _answers;
     public Sprite _interviewerProfilePicture;
 
+    
     private void Start()
     {
+        GetActiveJob();
         BuildInterviewDeck();
         ChooseInterviewQuestion();
         InstantiateInterviewQuestion();
@@ -42,6 +44,11 @@ public class InterviewDeck : MonoBehaviour
         GetInterviewerProfilePicture();
     }
 
+    private void GetActiveJob()
+    {
+        _activeJob = GameManager.instance.activeJob;
+    }
+    
     private void BuildInterviewDeck()
     {
         _questions = _activeJob.questionList;
