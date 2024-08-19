@@ -63,7 +63,4 @@ public class JobSelectionMenu : MonoBehaviour
         ClearDisplay();
         InstantiateJobSelectionBlocks(seniorJobs, jobSelectionArea);
     }
-
-    // add button to the JobSelectionBlock prefab
-    // add public methods to this class to set selected Job ID for the run
 }

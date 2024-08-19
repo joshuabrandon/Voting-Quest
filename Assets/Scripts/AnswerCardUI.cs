@@ -42,9 +42,6 @@ public class AnswerCardUI : MonoBehaviour
 
     private void SetCardImages()
     {
-        //_competencyEmblem.sprite = _card.CardData.CompetencyEmblem;
-        //_competencyIndicator.sprite = _card.CardData.CompetencyIndicator;
-        //_personalityEmblem.sprite = _card.CardData.PersonalityEmblem;
-        //_personalityIndicator.sprite = _card.CardData.PersonalityIndicator;
+        
     }
 }

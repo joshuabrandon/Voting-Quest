@@ -8,6 +8,7 @@ TagManager:
   - QuestionText
   - AnswerCard
   - JobSelectionBlock
+  - ApplicantCard
   layers:
   - Default
   - TransparentFX

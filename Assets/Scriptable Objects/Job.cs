@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Job", menuName = "Scriptable Objects/New Job")]
 public class Job : ScriptableObject
 {
     public int jobId;
