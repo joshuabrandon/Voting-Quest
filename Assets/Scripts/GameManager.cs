@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public int combinedWinThreshold = 100;
 
     public Job activeJob = null;
+    public Applicant activeApplicant = null;
 
     private void Update()
     {
