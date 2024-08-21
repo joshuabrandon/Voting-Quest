@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06255582122a80b4d89b034c6cd6dee4, type: 3}
-  m_Name: JobEditorWindowData
+  m_Script: {fileID: 11500000, guid: 340ffe8359aae5547aa7b5945bd05706, type: 3}
+  m_Name: Sebby
   m_EditorClassIdentifier: 
-  jobId: 7
-  questionId: 4
-  answerId: 13
+  applicantId: 5
+  applicantName: Sebby
+  applicantBio: I like to grind.
+  applicantRarity: 2
+  applicantTraits: 0
+  applicantProfilePicture: {fileID: 0}

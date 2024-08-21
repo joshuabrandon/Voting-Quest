@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8087ba8dc168774890b3d8880b70628, type: 3}
   m_Name: ApplicantEditorWindowData
   m_EditorClassIdentifier: 
-  ApplicantId: 1
+  applicantId: 11

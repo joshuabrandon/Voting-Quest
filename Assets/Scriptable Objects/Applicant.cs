@@ -10,10 +10,10 @@ public class Applicant : ScriptableObject
     public string applicantName;
     public string applicantBio;
     public ApplicantRarity applicantRarity;
-    public List<ApplicantTraits> applicantTraits;
+    public ApplicantTraits applicantTraits;
     public Sprite applicantProfilePicture;
 
-    public void Initialize(int applicantId, string applicantName, string applicantBio, ApplicantRarity applicantRarity, List<ApplicantTraits> applicantTraits, Sprite applicantProfilePicture)
+    public void Initialize(int applicantId, string applicantName, string applicantBio, ApplicantRarity applicantRarity, ApplicantTraits applicantTraits, Sprite applicantProfilePicture)
     {
         this.applicantId = applicantId;
         this.applicantName = applicantName;
@@ -32,10 +32,13 @@ public enum ApplicantRarity
     Legendary
 }
 
+[System.Flags]
 public enum ApplicantTraits
 {
-    Funny,
-    Charismatic,
-    Arrogant,
-    Lazy
+    None            = 0,
+    Funny           = 1 << 0,
+    Charismatic     = 1 << 1,
+    Arrogant        = 1 << 2,
+    Lazy            = 1 << 3,
+    Quick_Learner   = 1 << 4,
 }

@@ -27,7 +27,7 @@ public class JobEditorWindow : EditorWindow
 
     private Vector2 scrollPos;
 
-    private const string JobDataDefaultPath = "Assets/Prefabs/Jobs/";
+    //private const string JobDataDefaultPath = "Assets/Prefabs/Jobs/";
 
     [MenuItem("Tools/Job Editor Window")]
     public static void ShowWindow()
@@ -144,6 +144,7 @@ public class JobEditorWindow : EditorWindow
         EditorGUILayout.PrefixLabel("Job Description");
         job.jobDescription = EditorGUILayout.TextArea(job.jobDescription, GUILayout.Width(position.width - 30), GUILayout.Height(50));
         job.interviewerSprite = EditorGUILayout.ObjectField("Interviewer Sprite", job.interviewerSprite, typeof(Sprite), false) as Sprite;
+        job.jobLevel = (JobLevel)EditorGUILayout.EnumPopup("Job Level", job.jobLevel);
     }
 
     private void AssignQuestionVariables(Question question)

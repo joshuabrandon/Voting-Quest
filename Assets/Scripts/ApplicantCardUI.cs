@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 
 public class ApplicantCardUI : MonoBehaviour
@@ -41,7 +42,9 @@ public class ApplicantCardUI : MonoBehaviour
         _applicantName.text = _card.CardData.applicantName;
         _applicantBio.text = _card.CardData.applicantBio;
         _applicantRarity.text = _card.CardData.applicantRarity.ToString();
-        string traitText = string.Join("\n", _card.CardData.applicantTraits);
+        string[] traits = _card.CardData.applicantTraits.ToString().Replace("_", " ").Split(",");
+        System.Array.Sort(traits);
+        string traitText = string.Join("\n", traits.Select(trait => trait.Trim()));
         _applicantTraits.text = traitText;
     }
 

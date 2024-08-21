@@ -1184,7 +1184,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _applicantCardPrefab: {fileID: -7590607356181881443, guid: 4f4d918550bc390488210e4d640e61bb, type: 3}
   _applicantCardArea: {fileID: 541501400}
-  _allApplicantCards: []
+  _allApplicantCards:
+  - {fileID: 11400000, guid: 4e142badb605d1a4082fb4178e745a61, type: 2}
+  - {fileID: 11400000, guid: aa787aed8def1d840b4a55cab29218d0, type: 2}
+  - {fileID: 11400000, guid: c25dc5564dbade34b94c4cd03a384994, type: 2}
+  - {fileID: 11400000, guid: 8a6d21b2380ed94428d710284203c63c, type: 2}
+  - {fileID: 11400000, guid: 2799bb6162dc1e74784cede006a8cb4d, type: 2}
+  - {fileID: 11400000, guid: 3f5a6286c0fd9214e94e041819e48c01, type: 2}
+  - {fileID: 11400000, guid: 345c449839227dc46b74ad2f6d5f0692, type: 2}
+  - {fileID: 11400000, guid: 85f3c29f6a02256488a848a4b4fbf67b, type: 2}
 --- !u!1 &934589695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,9 +1544,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1701968334}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ReturnToMainMenu
+      - m_Target: {fileID: 775141406}
+        m_TargetAssemblyTypeName: ApplicantDeck, Assembly-CSharp
+        m_MethodName: RefreshApplicantGrid
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1899,19 +1907,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1784200334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1701968334}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ReturnToMainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1784200334
 MonoBehaviour:
   m_ObjectHideFlags: 0

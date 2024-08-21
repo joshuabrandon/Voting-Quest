@@ -18,7 +18,7 @@ public class ApplicantDeck : MonoBehaviour
 
     public void GetApplicantPool()
     {
-        _applicantCardPool = _allApplicantCards;
+        _applicantCardPool = new List<Applicant>(_allApplicantCards);
         ShuffleList(_applicantCardPool);
         _displayedApplicantCards = new List<Applicant>(_applicantCardPool.GetRange(0, 3));
         _applicantCardPool.RemoveRange(0, 3);
@@ -33,14 +33,14 @@ public class ApplicantDeck : MonoBehaviour
         }
     }
 
-    public void RefreshApplicantGrid() // need to test this
+    public void RefreshApplicantGrid()
     {
         ClearApplicantGrid();
-
         if (_applicantCardPool.Count > 3)
         {
             _displayedApplicantCards = new List<Applicant>(_applicantCardPool.GetRange(0, 3));
             _applicantCardPool.RemoveRange(0, 3);
+            PopulateApplicantGrid();
         }
         else
         {

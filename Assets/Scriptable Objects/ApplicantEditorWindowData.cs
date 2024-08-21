@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ApplicantEditorWindowData : ScriptableObject
 {
-    public int ApplicantId = 1;
+    public int applicantId = 1;
 }
